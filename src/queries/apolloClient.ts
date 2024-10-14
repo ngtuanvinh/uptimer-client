@@ -17,11 +17,11 @@ import { createClient } from 'graphql-ws';
 const httpUrl: string =
   process.env.NEXT_PUBLIC_NODE_ENV === 'development'
     ? 'http://localhost:5000/graphql'
-    : `${process.env.NEXT_PUBLIC_HTTP_SERVER_URL}/gaphql`;
+    : `${process.env.NEXT_PUBLIC_HTTP_SERVER_URL}/graphql`;
 const wsUrl: string =
   process.env.NEXT_PUBLIC_NODE_ENV === 'development'
     ? 'ws://localhost:5000/graphql'
-    : `${process.env.NEXT_PUBLIC_WEBSOCKET_SERVER_URL}/gaphql`;
+    : `${process.env.NEXT_PUBLIC_WEBSOCKET_SERVER_URL}/graphql`;
 
 const httpLink: ApolloLink = createHttpLink({
   uri: httpUrl,
